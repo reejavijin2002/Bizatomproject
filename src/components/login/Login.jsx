@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./login.css";
-import logo from "./Group 1.png";
+import logo from '../../asset/image/Group 1.png'
 import { FaAngry, FaEye, FaEyeSlash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -34,7 +35,7 @@ const Login = () => {
       <div className="second">
         <a className="forgot">Forget your password?</a>
       </div>
-      <button className="button5">Login</button>
+      <Link to='/dashboard'><button className="button5">Login</button></Link>
     </div>
   );
 };

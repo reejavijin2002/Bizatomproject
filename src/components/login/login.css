@@ -1,6 +1,8 @@
-@media (max-width:500px) {
+@media (max-width:1000px) {
     .maindiv {
         padding: 20px 20px;
+        caret-color: transparent;
+        outline: none;
     }
     img {
         margin-top: 40px;

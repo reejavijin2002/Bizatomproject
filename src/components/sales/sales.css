@@ -1,0 +1,81 @@
+@media (max-width:500px) {
+    .centerdiv {
+        padding: 15px;
+        caret-color: transparent;
+        outline: none;
+    }
+    .carddiv {
+        display: flex;
+    }
+    .input11 {
+        width: 70%;
+        padding: 15px 10px;
+        border-radius: 5px;
+        border: 1px solid black;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .input12 {
+        width: 30%;
+        padding: 15px 10px;
+        border-radius: 5px;
+        border: 1px solid black;
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    label {
+        padding-bottom: 10px;
+    }
+    .input13 {
+        font-size: 14px;
+        background-color: #ffffff;
+        align-items: center;
+        padding: 15px 0px;
+        padding-left: 15px;
+        color: #000000;
+        border-radius: 5px;
+        border: 1px solid #000000;
+        width: 95%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .input14 {
+        font-size: 14px;
+        background-color: #ffffff;
+        align-items: center;
+        padding: 15px 0px;
+        padding-left: 15px;
+        color: #000000;
+        border-radius: 5px;
+        border: 1px solid #000000;
+        width: 95%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .radiodiv {
+        margin-top: 10px;
+        display: flex;
+        margin-bottom: 40px;
+    }
+    .cancel {
+        padding: 10px 5px;
+        width: 48%;
+        border: none;
+        border-radius: 5px;
+        border: 1px solid #F05A28;
+        color: #F05A28;
+        font-weight: 600;
+        background-color: #ffffff;
+    }
+    .done {
+        padding: 10px 5px;
+        width: 48%;
+        border: none;
+        border-radius: 5px;
+        margin-left: 5px;
+        background-color: #F05A28;
+        color: #ffffff;
+        font-weight: 600;
+    }
+}
