@@ -122,7 +122,9 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="secondpart">
-            <Doughnut data={data} />
+            <div className="circleshadow">
+            <Doughnut data={data} className="chart"/>
+            </div>
         </div>
       </div>
       <div className="buttondiv1">
