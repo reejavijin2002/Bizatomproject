@@ -87,6 +87,7 @@
         color: #F05A28;
         font-weight: 600;
         background-color: #ffffff;
+        cursor: pointer;
     }
     .buttonactivation {
         padding: 10px 5px;
@@ -98,6 +99,7 @@
         font-weight: 600;
         background-color: #ffffff;
         margin-left: 5px;
+        cursor: pointer;
     }
     .secondpart {
         width: 50%;
