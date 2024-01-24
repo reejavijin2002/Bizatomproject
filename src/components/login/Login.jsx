@@ -16,15 +16,15 @@ const navigate=useNavigate()
     setPasswordVisible((prevVisible) => !prevVisible);
   };
   const userIdhandler=(e)=>{
-    setUserid(e.target.value)
+    setUserid(e.target.value.trim())
   }
 
   const validateForm = (values) => {
     const errors = {};
-    if (!userid) {
+    if (!userid.trim()) {
       errors.Userid = "Userid is required";
     }
-    if (!password) {
+    if (!password.trim()) {
       errors.Password = "Password is required";
     }
     return errors
@@ -58,7 +58,7 @@ const navigate=useNavigate()
               className="input1"
               placeholder="Enter your password"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value.trim())}
             />
             <div className="eye-icon" onClick={togglePassword}>
               {passwordVisible ? <FaEye /> : <FaEyeSlash />}
