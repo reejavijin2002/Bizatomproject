@@ -19,7 +19,7 @@ const Dashboard = () => {
             
             ],
             borderColor: [ 
-                 'rgb(248,177,177)',
+              'rgb(248,177,177)',
               'rgb(255,146,109)',
             
             
