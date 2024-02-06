@@ -8,7 +8,7 @@
         display: flex;
     }
     .input11 {
-        width: 70%;
+        width: 100%;
         padding: 15px 10px;
         border-radius: 5px;
         border: 1px solid black;
@@ -53,10 +53,10 @@
         margin-top: 10px;
         margin-bottom: 10px;
     }
-    .radiodiv1 {
+    .radiodiv {
         margin-top: 10px;
         display: flex;
-        margin-bottom: 40px;
+        margin-bottom: 0px;
     }
     .cancel {
         padding: 10px 5px;
@@ -69,17 +69,16 @@
         background-color: #ffffff;
         cursor: pointer;
     }
-    .done {
+    .done1 {
         padding: 10px 5px;
-        width: 48%;
-        border: none;
+        width: 98%;
+        margin-top: 20px;
         border-radius: 5px;
         margin-left: 5px;
         background-color: #F05A28;
         color: #ffffff;
         font-weight: 600;
         cursor: pointer;
-        margin-top: 20px;
     }
 }
 

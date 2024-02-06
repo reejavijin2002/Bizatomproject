@@ -93,7 +93,7 @@ const Sales = () => {
               onChange={(e) => setRemarks(e.target.value)}
             />
             <label>Payment method</label>
-            <div className="radiodiv">
+            <div className="radiodiv1">
               <Field type="radio" name="paymentMethod" value="cash" />
               Cash&nbsp;&nbsp;&nbsp;
               <Field type="radio" name="paymentMethod" value="upi" />

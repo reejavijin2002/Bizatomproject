@@ -129,7 +129,7 @@ const Dashboard = () => {
       </div>
       <div className="buttondiv1">
         <Link to='/sales'><button className="buttonsales">Sales</button></Link>
-        <button className="buttonactivation">Activation</button>
+        <Link to='/activation'><button className="buttonactivation">Activation</button></Link>
       </div>
     </div>
   );
