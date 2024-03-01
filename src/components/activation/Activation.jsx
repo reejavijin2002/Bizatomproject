@@ -76,15 +76,33 @@ const Activation = () => {
       }
     return errors;
   };
+  const handleSubmit = () => {
+    const formData = {
+      fullname: fullname,
+      mobile: mobile,
+      dob: dob,
+      email: email,
+      address1: address1,
+      address2: address2,
+      pincode: pincode,
+      photo: photo,
+      password: password,
+      confirmpassword: confirmpassword,
+      accept: accept
+    };
+
+    console.log("Form State Object:", formData);
+  };
   return (
     <div className="centerdiv">
       <h3>Card Activation</h3>
-      <Formik initialValues={{ initialValues1 }} validate={validationform}>
+      <Formik initialValues={{ initialValues1 }} validate={validationform} onSubmit={handleSubmit}>
         {(formik) => (
           <Form>
             <label>Full Name</label>
             <Field
               type="text"
+              name="name"
               className="input"
               placeholder="Enter your full name"
               value={fullname}
@@ -97,6 +115,7 @@ const Activation = () => {
             <div className="carddiv">
               <Field
                 type="number"
+                name="number"
                 className="input11"
                 placeholder="Type mobile number"
                 value={mobile}
@@ -111,6 +130,7 @@ const Activation = () => {
             <br></br>
             <Field
               type="date"
+              name="dob"
               className="input13"
               placeholder="Enter your dob"
               pattern=""
@@ -123,6 +143,7 @@ const Activation = () => {
             <br></br>
             <Field
               type="email"
+              name="email"
               className="input14"
               placeholder="Enter email"
               value={email}
@@ -135,6 +156,7 @@ const Activation = () => {
             <div className="radiodiv">
               <Field
                 type="text"
+              
                 className="input"
                 placeholder="Address"
                 name="paymentMethod"
@@ -237,7 +259,7 @@ const Activation = () => {
               <div className="validate">{formik.errors.accept}</div>
             )} */}
             <div>
-              <button className="done1" onClick={() => formik.handleSubmit}>
+              <button className="done1" type="submit" onClick={() => formik.handleSubmit(handleSubmit())}>
                 Register
               </button>
             </div>

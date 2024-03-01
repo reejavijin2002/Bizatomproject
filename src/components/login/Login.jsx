@@ -29,9 +29,15 @@ const navigate=useNavigate()
     }
     return errors
   };
-  const submitFunction =()=>{
-     navigate("/dashboard")
-  }
+  const submitFunction = () => {
+    const formData = {
+      userid: userid,
+      password: password
+    };
+  
+    console.log("Form Data:", formData);
+    navigate("/dashboard");
+  };
   return (
     <Formik
       initialValues={{
@@ -42,11 +48,11 @@ const navigate=useNavigate()
       onSubmit={submitFunction}
     >
       {(formik) => (
-        <Form className="maindiv" onSubmit={formik.handleSubmit} >
+        <Form className="maindiv" >
           <h2>Hi, Welcome Back!</h2>
           <img src={logo} alt="" />
           <label>User ID</label>
-          <Field type="text" className="input" placeholder="Enter your id" onChange={userIdhandler} value={userid} />
+          <Field type="id" name="Userid" className="input"  placeholder="Enter your id" onChange={userIdhandler} value={userid} />
           {!userid ? (
             <div className="validate">{formik.errors.Userid}</div>
           ) : null}
@@ -55,6 +61,7 @@ const navigate=useNavigate()
           <div className="password-input-container">
             <Field
               type={passwordVisible ? "text" : "password"}
+              name="Password" 
               className="input1"
               placeholder="Enter your password"
               value={password}
@@ -71,7 +78,7 @@ const navigate=useNavigate()
             <a className="forgot">Forget your password?</a>
           </div>
           <div onClick={(e) => formik.handleSubmit(userid && password ?submitFunction():null)}>
-            <button className="button5"  >Login</button>
+            <button className="button5"  type="submit" >Login</button>
           </div>
         </Form>
       )}

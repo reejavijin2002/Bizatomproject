@@ -37,15 +37,28 @@ const Sales = () => {
     }
     return errors;
   };
+  
+  const handleSubmit = () => {
+    const formData = {
+      mobile: mobile,
+      card: card,
+      name: name,
+      remarks: remarks,
+      paymentMethod: paymentMethod
+    };
+  
+    console.log("Form State Object:", formData);
+  };
   return (
     <div className="centerdiv">
       <h3>Card sales</h3>
-      <Formik initialValues={{ initialValues1 }} validate={validationform}>
+      <Formik initialValues={{ initialValues1 }} validate={validationform} onSubmit={handleSubmit}>
         {(formik) => (
           <Form>
             <label>Mobile number</label>
             <Field
               type="number"
+              name="number"
               className="input"
               placeholder="Enter your mobile number"
               value={mobile}
@@ -58,6 +71,7 @@ const Sales = () => {
             <div className="carddiv">
               <Field
                 type="number"
+                name="cardnumber"
                 className="input11"
                 placeholder="Type card number"
                 value={card}
@@ -73,6 +87,7 @@ const Sales = () => {
             <br></br>
             <Field
               type="text"
+              name="name"
               className="input13"
               placeholder="Enter your name"
               pattern="[A-Za-z0-9]+"
@@ -87,6 +102,7 @@ const Sales = () => {
             <br></br>
             <Field
               type="text"
+              name="remarks"
               className="input14"
               placeholder="Enter remarks"
               value={remarks}
@@ -103,8 +119,8 @@ const Sales = () => {
               <div className="validate12">{formik.errors.paymentMethod}</div>
             )}
             <div>
-              <button className="cancel">Cancel</button>
-              <button className="done" onClick={() => formik.handleSubmit}>
+              <button className="cancel" type="button"> Cancel</button>
+              <button className="done" type="submit" onClick={() => formik.handleSubmit(handleSubmit())}>
                 Done
               </button>
             </div>
